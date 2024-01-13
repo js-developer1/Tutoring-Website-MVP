@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MVP</title>
+
+	<!-- observe styling and scripting -->
+	<link rel="stylesheet" href="./styling/observe.css">
+	<script src="./scripts/observe.js" defer></script>
+
+	<!-- collapsible sections scripts -->
+	<script src="./scripts/collapsible.js" defer></script>
+
+	<link rel="stylesheet" href="./styling/style.css">
+	<script src="./scripts/script.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<img src="./media/headerBG.png" alt="kids being taught" style="width: 100%;">
+	</header>
+	<main>
+		<section id='history'>
+			<h1 class="hidden left" style="transition-delay: 100ms;">Brief History</h1>
+			<p class="hidden left" style="transition-delay: 175ms;">Lorem ipsum dolor, sit amet consectetur adipisicing
+				elit. Sapiente quis consectetur,
+				ullam repellendus ad
+				iure saepe! Quidem similique sed fugit vel cumque, nihil dicta esse recusandae harum aut, non nobis!</p>
+			<img class="hidden left" style="transition-delay: 250ms;" src="#" alt="Business Logo">
+		</section>
+		<section class="dark" id='whyChooseUs'>
+			<h1 class="hidden right" style="transition-delay: 100ms;">Why Choose Us?</h1>
+			<img class="hidden right" style="transition-delay: 175ms;" src="./media/kid smiling at school.png"
+				alt="kid smiling" style="float: right; margin-left: 2.5%; margin-right: 0%; border-radius: 20px;">
+			<p class="hidden right" style="transition-delay: 250ms;">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta veritatis autem culpa corporis! Ipsa
+				pariatur, labore quam sint dolores similique, recusandae repudiandae, ea laboriosam aspernatur nemo
+				magni ipsam placeat porro.
+			</p>
+		</section>
+		<section id='services'>
+			<h1 class="hidden left">What We Offer</h1>
+			<div class="hidden right">
+				<img src="./media/vecteezy_pencil-and-calculator-on-mathematic-formula-exercise-test_6278174 1.png"
+					alt="mathematics">
+				<div id="content">
+					<h2>Mathematics</h2>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus provident et
+						laboriosam
+						rem possimus suscipit. Consequuntur temporibus similique ex error tempore sit sed cumque debitis
+						necessitatibus, odit ab soluta?</p>
+					<button onclick="scrollToSection()">Book Classes Now</button>
+				</div>
+			</div>
+			<div class="hidden left" style="flex-direction: row-reverse; transition-delay: 200ms;">
+				<img src="./media/vecteezy_group-of-young-medical-students-doing-research_12689355 1.png"
+					alt="scientists">
+				<div id="content">
+					<h2>Physical Sciences</h2>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo et dolorum eligendi
+						reprehenderit
+						quia quibusdam quo iste saepe quaerat eos. Sunt vitae esse ex cumque inventore quod quaerat sit
+						non.
+					</p>
+					<button onclick="scrollToSection()">Book Classes Now</button>
+				</div>
+			</div>
+			<div class="hidden right" style="transition-delay: 400ms;">
+				<img src="./media/vecteezy_french-flag-in-the-wind_8585320 1 (1).png" alt="french flag">
+				<div id="content">
+					<h2>French</h2>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, aliquam repudiandae. Beatae quam
+						magnam id, odit suscipit consequuntur perferendis tempore quisquam iure aperiam earum adipisci
+						praesentium accusamus vero harum ea!</p>
+					<button onclick="scrollToSection()">Book Classes Now</button>
+				</div>
+			</div>
+		</section>
+		<section class="dark" id="faq">
+			<h1 class="hidden left" style="transition-delay: 100ms;">Frequently Asked Questions (FAQ)</h1>
+			<img class="hidden left" style="transition-delay: 175ms;"
+				src="./media/vecteezy_customer-support-service-girl-operator-with-headphones-and_-removebg-preview 1.png"
+				alt="tech suport image" style="display: block; width: 30%;">
+			<br>
+			<div class="hidden right" style="transition-delay: 250ms;">
+				<button class="collapsible" onclick="toggleCollapsible(1, 'section1')">
+					Question 1
+					<span style="float: right;" class="indicator">&#9660;</span>
+				</button>
+				<div class="content" id="section1">
+					<p>Answer 1</p>
+				</div>
+			</div>
+			<div class="hidden left" style="transition-delay: 325ms;">
+				<button class="collapsible" onclick="toggleCollapsible(2, 'section2')">
+					Question 2
+					<span style="float: right;" class="indicator">&#9660;</span>
+				</button>
+				<div class="content" id="section2">
+					<p>Answer 2</p>
+				</div>
+			</div>
+			<div class="hidden right" style="transition-delay: 400ms;">
+				<button class="collapsible" onclick="toggleCollapsible(3, 'section3')">
+					Question 3
+					<span style="float: right;" class="indicator">&#9660;</span>
+				</button>
+				<div class="content" id="section3">
+					<p>Answer 3</p>
+				</div>
+			</div>
+		</section>
+		<!-- <section id="form">
+			<h1>Get Started Today</h1>
+			<form>
+				<input placeholder="John" type="text" id="first" name="first">
+				<input placeholder="Doe" type="text" id="last" name="last">
+				<br>
+				<input placeholder="JohnDoe@gmail.com" type="email" id="email" name="email">
+				<br>
+				<input placeholder="+1 (647)-123-2349" type="tel" id="phone" name="phone">
+				<br>
+				<input type="submit" id="submit">
+			</form>
+		</section> -->
+	</main>
+	<footer id='contacts' style="padding-bottom: 20px;">
+		<h1 class="hidden left" style="transition-delay: 100ms;">Contacts</h1>
+		<p class="hidden left" style="text-align: center; transition-delay: 175ms;"><span><img
+					src="https://cdn-icons-png.flaticon.com/128/597/597177.png" width="16px" height="16px"
+					style="margin-right: 10px;"></span><a href="#tel:437-267-8900">Your Phone Number</a></p>
+		<p class="hidden left" style="text-align: center; transition-delay: 250ms;"><span><img
+					src="https://cdn-icons-png.flaticon.com/128/646/646135.png" width="16px" height="16px"
+					style="margin-right: 10px;"></span><a href="#mailto:girikdhall@gmail.com">Your Email</a></p>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Default Styles */
+
+:root {
+	--primary-color: #9CD0FF;
+	--secondary-color: #3EA2FF;
+	--light-color: #ffffff;
+	--dark-color: #000000;
+	--button-color: #FFB23E;
+	--placeholder-color: #4f4f4f;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0px;
+	overflow-x: hidden;
+	font-family: 'Inter', sans-serif;
+	background-color: var(--primary-color);
+}
+
+h1 {
+	text-align: center;
+	font-size: 3vw;
+}
+
+h2 {
+	font-size: 1.8vw;
+}
+
+section {
+	display: block;
+	height: max-content;
+	padding: 5%;
+	overflow: hidden;
+}
+
+section>p,
+section>img {
+	display: block;
+}
+
+section>img {
+	float: left;
+	width: 30%;
+	margin-right: 2.5%;
+}
+
+@media (max-width: 600px) {
+
+	section>p,
+	section>img {
+		display: block;
+	}
+
+	section>img,
+	section>div>img {
+		width: 100%;
+		margin: 0px auto;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: 5vh;
+	}
+
+	h2 {
+		font-size: 3vh;
+	}
+}
+
+.dark {
+	background-color: var(--secondary-color);
+}
+
+/* Form Styles
+
+form {
+	width: 70%;
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	grid-template-rows: repeat(4, 36.658px);
+	margin: 0px auto;
+	padding: 10px;
+}
+
+input {
+	border-radius: 25px;
+	border: none;
+	height: 26.658px;
+}
+
+#first,
+#last,
+#submit {
+	width: 95%;
+}
+
+#first {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+#last {
+	grid-column: 2;
+	grid-row: 1;
+	margin-left: 4.2%;
+}
+
+#email {
+	grid-column: 1 / span 2;
+	grid-row: 2;
+}
+
+#phone {
+	grid-column: 1 / span 2;
+	grid-row: 3;
+}
+
+#submit {
+	grid-column: 2;
+	grid-row: 4;
+	margin-left: 4.5%;
+	background-color: var(--button-color);
+	color: var(--light-color);
+	font-weight: bolder;
+}
+
+::placeholder {
+	font-family: 'Inter', sans-serif;
+	opacity: 1;
+	Firefox
+}
+
+::-ms-input-placeholder {
+	Edge 12 - 18
+	font-family: 'Inter', sans-serif;
+}
+*/
+/* Services Section Styles */
+
+#services>div {
+	background-color: var(--secondary-color);
+	border-radius: 24px;
+	margin: 0px auto;
+	margin-bottom: 5vh;
+	width: 90%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+#services>div>img {
+	float: left;
+	height: 100%;
+
+}
+
+#content>h2,
+#content>p {
+	text-align: center;
+}
+
+#content>button {
+	width: 45%;
+	height: 25%;
+	border-radius: 100px;
+	background-color: var(--button-color);
+	color: var(--light-color);
+	border: none;
+	font-size: 1.2vw;
+	font-weight: bold;
+	display: block;
+	margin: 0px auto;
+	padding: 5px 5px;
+}
+
+@media (max-width: 768px) {
+	#services>div {
+		background-color: var(--secondary-color);
+		border-radius: 24px;
+		margin-bottom: 5vh;
+		width: 90%;
+		overflow: hidden;
+		display: block;
+	}
+
+	#services>div>img {
+		float: none;
+		width: 100%;
+	}
+
+	#content,
+	#services>div>img {
+		display: block;
+	}
+
+	#content {
+		padding: 0px 10px 10px 10px;
+	}
+
+	#content>button {
+		font-size: 2vh;
+		width: 55%;
+	}
+}
+
+/* ColLapsible Styles */
+
+#faq>img {
+	display: block;
+	margin: 0px auto;
+	width: 30%;
+	float: none;
+}
+
+#faq>div {
+	display: block;
+	margin: 0px auto;
+	background-color: var(--primary-color);
+	border-radius: 24px;
+	width: 80%;
+	margin-bottom: 20px;
+}
+
+.collapsible {
+	font-size: 1.3rem;
+	margin: 0px auto;
+	width: 100%;
+	background-color: var(--primary-color);
+	color: var(--dark-color);
+	cursor: pointer;
+	border-radius: 24px;
+	padding: 10px;
+	border: none;
+	outline: none;
+	font-family: 'Inter', sans-serif;
+	transition: background-color 0.5s;
+}
+
+.collapsible:hover {
+	background-color: var(--button-color);
+	color: var(--light-color);
+}
+
+button.active {
+	background-color: var(--button-color);
+	color: var(--light-color);
+}
+
+.content {
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+	max-height: 0px;
+	transition: max-height 0.5s ease-in-out;
+}
+
+.content.active {
+	max-height: 100px;
+}
+
+.collapsible.active .indicator {
+	transform: translateY(0%) rotate(-90deg);
+}
+
+.collapsible .indicator {
+	transform: rotate(0deg);
+}
